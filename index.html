@@ -116,7 +116,7 @@
     <h1>Security Training: Insider Threats</h1>
     
     <div id="quiz-block">
-        <div id="progress">Question 1 of 10</div>
+        <div id="progress">Question 1 of 15</div>
         <div id="question-container">
             <div id="question">Question text goes here</div>
             <div id="options">
@@ -128,7 +128,7 @@
 
     <div id="score-container">
         <h2>Training Complete!</h2>
-        <p id="final-score">You scored 0 out of 10.</p>
+        <p id="final-score">You scored 0 out of 15.</p>
         <p id="score-message"></p>
         <button id="restart-btn" onclick="restartQuiz()">Retake Quiz</button>
     </div>
@@ -159,15 +159,26 @@
             rationale: "This is a classic example of negligence where an employee accidentally leaves systems vulnerable without malicious intent."
         },
         {
-            question: "You receive an email from 'IT Support' asking you to click a link to verify your password. What is the most secure response?",
+            question: "You receive an email claiming to be from IT asking you to urgently reset your password using a provided link. What should you do first?",
             options: [
-                "Forward the email to your manager and wait for their approval.",
+                "Click the link immediately.",
                 "Reply to the sender and ask for their employee ID.",
-                "Do not click the link and report the email via the official IT security channels.",
+                "Verify the request with IT or report the email.",
                 "Click the link but enter a fake password to see what happens."
             ],
             correctIndex: 2,
             rationale: "Reporting suspicious emails allows security teams to investigate and block the threat safely without risking credential exposure."
+        },
+        {
+            question: "To save time, an employee uses a free, unapproved online tool to convert a highly confidential financial report from PDF to Word. What type of threat does this represent?",
+            options: [
+                "A malicious insider threat, as they are intentionally trying to leak the data.",
+                "A negligent insider threat (Shadow IT), as uploading sensitive data to unvetted third-party services exposes it to unauthorized access.",
+                "No threat at all, because the tool is free and publicly available.",
+                "An external threat, because the tool is hosted on the internet."
+            ],
+            correctIndex: 1,
+            rationale: "Using unapproved software or services (Shadow IT) for convenience often strips away company security controls, resulting in accidental data exposure."
         },
         {
             question: "What does the principle of 'least privilege' mean in the context of preventing insider threats?",
@@ -181,6 +192,17 @@
             rationale: "Restricting access limits the potential damage an insider can cause, whether their actions are malicious or accidental."
         },
         {
+            question: "While waiting for a flight, an employee connects to the airport's free, public Wi-Fi to check company emails without turning on their VPN. Why is this a security risk?",
+            options: [
+                "Public Wi-Fi networks are incredibly slow and will decrease productivity.",
+                "Public Wi-Fi networks are often unsecured, allowing cybercriminals on the same network to intercept unencrypted data or capture login credentials.",
+                "The airport might charge the company for the bandwidth used.",
+                "It violates physical security policies regarding public spaces."
+            ],
+            correctIndex: 1,
+            rationale: "Working on public networks without a Virtual Private Network (VPN) is a form of negligence that easily exposes corporate traffic to snooping."
+        },
+        {
             question: "A colleague you don't know well asks to 'borrow' your access badge because they forgot theirs. What is the most secure response?",
             options: [
                 "Let them use your badge but only if they promise to return it in 5 minutes.",
@@ -190,6 +212,17 @@
             ],
             correctIndex: 1,
             rationale: "This enforces proper physical security protocols and ensures access is properly logged and authorized."
+        },
+        {
+            question: "An HR manager is emailing a list of employee salaries to the CFO, but accidentally selects a similar-sounding name from their email auto-complete list, sending it to an external vendor instead. This is an example of:",
+            options: [
+                "A malicious data breach.",
+                "A negligent insider threat caused by human error and lack of attention to detail.",
+                "A system failure that IT needs to fix.",
+                "A targeted social engineering attack."
+            ],
+            correctIndex: 1,
+            rationale: "Misdirected emails due to auto-complete or simply rushing are one of the most common ways sensitive data is accidentally leaked by employees."
         },
         {
             question: "Why is a 'clean desk policy' effective in mitigating insider threats?",
@@ -203,6 +236,17 @@
             rationale: "Securing physical documents prevents opportunistic data theft by malicious insiders or casual observation by unauthorized individuals."
         },
         {
+            question: "An employee uses the exact same password for their corporate network account as they do for their personal online gaming account. Why does this create an insider threat vulnerability?",
+            options: [
+                "The gaming company will be able to log into the corporate network.",
+                "It violates the rule against playing games on company time.",
+                "If the gaming site is breached, cybercriminals can use the stolen 'credential pair' to effortlessly access the employee's corporate accounts.",
+                "It makes the password too easy for the employee to remember."
+            ],
+            correctIndex: 2,
+            rationale: "Password reuse is a severe negligent behavior. A breach on a low-security personal site can instantly compromise high-security corporate systems."
+        },
+        {
             question: "Which scenario represents a potential malicious insider threat indicator?",
             options: [
                 "An employee downloading a large volume of confidential files to a personal external hard drive right before submitting their resignation.",
@@ -212,6 +256,17 @@
             ],
             correctIndex: 0,
             rationale: "This is a classic indicator of a malicious insider attempting to steal intellectual property or sensitive data before leaving."
+        },
+        {
+            question: "An employee accidentally leaves their unencrypted company USB drive on a table at a coffee shop. What is the primary concern?",
+            options: [
+                "The employee will have to pay to replace the physical drive.",
+                "Anyone who finds the drive can simply plug it in and immediately access all the confidential company data stored on it.",
+                "The USB drive might get infected with a virus from the coffee shop table.",
+                "The coffee shop will sell the drive to a competitor."
+            ],
+            correctIndex: 1,
+            rationale: "Losing physical storage devices that lack encryption is a prime example of negligence leading to a total compromise of the data held within."
         },
         {
             question: "How does using multi-factor authentication (MFA) help protect against insider threats?",
